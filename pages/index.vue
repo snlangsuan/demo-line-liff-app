@@ -32,7 +32,8 @@ export default {
   methods: {
     async initLiff() {
       await this.$liff.init({
-          liffId: '1654097973-D7rnQmw9'
+          liffId: '1654097973-D7rnQmw9',
+          withLoginOnExternalBrowser: true,
       });
       console.log('initialized')
       await this.getProfile()
