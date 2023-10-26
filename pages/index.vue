@@ -36,6 +36,8 @@ export default {
           withLoginOnExternalBrowser: true,
       });
       console.log('initialized')
+      const loggedIn = await this.$liff.isLoggedIn()
+      if (!loggedIn) return this.$liff.login()
       await this.getProfile()
     },
     async getProfile() {
